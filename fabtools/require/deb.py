@@ -99,7 +99,7 @@ def ppa(name, auto_accept=True, keyserver=None):
     else:
         auto_accept = ''
 
-    if not isinstance(keyserver, basestring) and keyserver:
+    if not isinstance(keyserver, str) and keyserver:
         keyserver = keyserver[0]
     if keyserver:
         keyserver = '--keyserver ' + keyserver
@@ -194,7 +194,7 @@ def _to_seconds(var):
     WEEK = 7 * DAY
     MONTH = 31 * DAY
     try:
-        for key, value in var.items():
+        for key, value in list(var.items()):
             if key in ('second', 'seconds'):
                 sec += value
             elif key in ('minute', 'minutes'):

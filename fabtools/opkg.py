@@ -71,7 +71,7 @@ def install(packages, update=False, options=None):
         update_index()
     if options is None:
         options = []
-    if not isinstance(packages, basestring):
+    if not isinstance(packages, str):
         packages = " ".join(packages)
     options.append("--verbosity=0")
     options = " ".join(options)
@@ -89,7 +89,7 @@ def uninstall(packages, options=None):
     command = "remove"
     if options is None:
         options = []
-    if not isinstance(packages, basestring):
+    if not isinstance(packages, str):
         packages = " ".join(packages)
     options = " ".join(options)
     cmd = '%(manager)s %(command)s %(options)s %(packages)s' % locals()

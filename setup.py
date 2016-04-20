@@ -30,9 +30,9 @@ class Tox(TestCommand):
 
 
 setup(
-    name='fabtools',
+    name='fabtools3',
     version='0.20.0-dev',
-    description='Tools for writing awesome Fabric files',
+    description='[Python3 fork] Tools for writing awesome Fabric files',
     long_description=read('README.rst') + '\n' + read('docs/CHANGELOG.rst'),
     author='Ronan Amicel',
     author_email='ronan.amicel@gmail.com',
@@ -61,8 +61,7 @@ setup(
         'Operating System :: Unix',
         'Operating System :: POSIX',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
-        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Software Development',
         'Topic :: Software Development :: Build Tools',
         'Topic :: Software Development :: Libraries',
